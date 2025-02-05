@@ -9,8 +9,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        'dark-gray' : "#2F2F2E",
+        'light-gray' : "#7A7A7A",
+        'green' : "#01C38E",
+        'black' : "#101010"
+      },
+      backgroundImage: {
+        'bugatti-lg': "url('/bugatti-lg.png')",
+        'bugatti-md': "url('/bugatti-md.png')",
+        'bugatti-sm': "url('/bugatti-sm.png')",
       },
     },
   },
