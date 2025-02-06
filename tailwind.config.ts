@@ -19,6 +19,21 @@ export default {
         'bugatti-md': "url('/bugatti-md.png')",
         'bugatti-sm': "url('/bugatti-sm.png')",
       },
+      fontFamily: {
+        'dmSans': ['DM Sans', 'sans-serif'],
+      },
+      fontSize: {
+        '5xl': '64px',
+        '4xl': '59px',
+        '3xl': '48px',
+        '2xl': '40px',
+        xl: '32px',
+        lg: '24px',
+        md: '20px',
+        sm: '16px',
+        xs: '14px',
+        xxs: '13px'
+      },
     },
   },
   plugins: [],
