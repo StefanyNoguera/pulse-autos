@@ -81,14 +81,80 @@ export default function Home() {
         </div>
       </div>
 
+
+
+
+
+
+
+
+
+
+
       <div className="snap-start h-screen" id="remapping">
+        <div className="flex flex-col md:flex-row items-start lg:pt-16 md:pt-20 pt-20">
+          <div className="lg:text-lg md:text-md text-sm flex items-center md:pl-16 pl-10">
+            <div className="w-8 h-px bg-green mr-2"></div>
+            <h1 className="italic lg:pl-3">Remapping</h1>
+          </div>
+          <div>
+            <h1 className="lg:text-3xl md:text-2xl text-xl lg:pl-28 lg:pr-16 lg:pt-0 md:pt-16 md:pr-16 pl-10 pt-12 pr-10">
+              Unlock Your Car’s True Potential with Vehicle Remapping.
+              <span className="text-light-gray"> More power, better fuel efficiency, and a smoother drive—all tailored to your vehicle.</span>
+            </h1>
+          </div>
+        </div>
+
+        <div className="pl-10">
+          <div className="w-8 h-px bg-green mr-2 "></div>
+        </div>
+
       </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
       <div className="snap-start h-screen bg-white" id="catalog">
       </div>
 
-      <div className="snap-start h-screen" id="contact">
+      <div className="snap-start h-screen relative flex flex-col" id="contact">
+        <div className="mt-auto">
+          <div className="lg:flex lg:justify-between lg:px-24 flex flex-col lg:flex-row flex-grow lg:pb-28 lg:pl-24 pl-16">
+            <div>
+              <span className="italic tracking-tighter lg:text-5xl md:text-3xl text-2xl text-white">PULSE</span>
+              <span className="lg:text-2xl text-xl text-green">autos</span>
+              <h1 className="text-light-gray lg:text-md md:text-sm text-xxs pb-14">
+                Unlock your vehicle’s true potential
+                <span className="block">and drive with confidence.</span>
+              </h1>
+            </div>
+            <div>
+              <h1 className="text-light-gray lg:text-md md:text-sm text-xxs">Address</h1>
+              <h1 className="text-white lg:text-lg md:text-md text-sm lg:pb-20">
+                3717 GRANDEWOOD BLVD
+                <span className="block">ORLANDO, FL, 32837 USA</span>
+              </h1>
+              <h1 className="text-light-gray lg:text-md md:text-sm text-xxs lg:pt-0 pt-14">Contact Us</h1>
+              <h1 className="text-white lg:text-lg md:text-md text-sm">+1 407 6339443</h1>
+              <h1 className="text-white lg:text-lg md:text-md text-sm lg:pb-0 pb-24">pulseautosco@hotmail.com</h1>
+            </div>
+          </div>
+        </div>
+        <div className="h-16 flex items-center justify-between border-t border-white px-10">
+          <h1 className="text-white md:text-md text-sm">Terms and Conditions</h1>
+          <h1 className="text-white md:text-md text-sm">Privacy Policy</h1>
+        </div>
       </div>
+
     </div>
   );
 }
