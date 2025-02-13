@@ -39,11 +39,11 @@ export default function Home() {
             </h1>
             <h1 className="text-white lg:p-5 md:p-4 p-2"><button onClick={handleClickCatalog}>Catalog</button></h1>
             <h1 className="text-white bg-green rounded-full lg:px-6 px-3 lg:h-11 h-9 flex items-center justify-center mr-3">
-                <button onClick={handleClickContact}>
-                  <span className="hidden md:inline">Contact us</span>
-                  <span className="md:hidden">Contact</span>
-                </button>
-              </h1>
+              <button onClick={handleClickContact}>
+                <span className="hidden md:inline">Contact us</span>
+                <span className="md:hidden">Contact</span>
+              </button>
+            </h1>
           </div>
         </div>
 
@@ -102,11 +102,35 @@ export default function Home() {
               Unlock Your Car’s True Potential with Vehicle Remapping.
               <span className="text-light-gray"> More power, better fuel efficiency, and a smoother drive—all tailored to your vehicle.</span>
             </h1>
+            <div className="hidden lg:flex pt-14">
+              <div className="pl-28">
+                <div className="h-px mt-3 w-96 bg-green mr-2 flex-shrink-0"></div>
+              </div>
+              <div>
+                <h1 className="text-light-gray pr-10 md:pr-16 text-md pl-4">
+                  At Pulse Autos, we offer professional vehicle remapping tailored to unleash the best performance from your car.
+                  Using advanced ECU tuning, we fine-tune your engine for more power, improved fuel efficiency, and a smoother driving
+                  experience.
+                </h1>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className="pl-10">
-          <div className="w-8 h-px bg-green mr-2 "></div>
+        <div className="pl-10 pt-10 md:pt-28 md:pl-16 flex lg:hidden">
+          <div className="md:w-80 w-16 h-px mt-3 bg-green mr-2 flex-shrink-0"></div>
+          <div>
+            <h1 className="text-light-gray pr-10 md:pr-16 md:text-sm text-xxs pl-3">
+              At Pulse Autos, we offer professional vehicle remapping tailored to unleash the best performance from your car.
+              Using advanced ECU tuning, we fine-tune your engine for more power, improved fuel efficiency, and a smoother driving
+              experience.
+            </h1>
+          </div>
+        </div>
+
+        <div>
+          <h1 className="border-2 rounded-full border-green flex items-center justify-center">Explore catalog</h1>
+          <h1 className="bg-green rounded-full flex items-center justify-center">Book a remap</h1>
         </div>
 
       </div>
