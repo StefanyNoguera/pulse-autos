@@ -1,6 +1,143 @@
 "use client";
+import Image from 'next/image';
+import React, { useState, useEffect } from 'react';
 
 export default function Home() {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [screenWidth, setScreenWidth] = useState(0);
+
+  const products = [
+    {
+      name: "StopTech Big Brake Kit",
+      price: "$1,250",
+      image: "/stoptech-brake-kit.jpg",
+      description: "High-performance front and rear brake kit with slotted rotors and 6-piston calipers for enhanced braking power."
+    },
+    {
+      name: "PowerStop Z36 Truck & Tow Brake Kit",
+      price: "$750",
+      image: "/powerstop-z36-kit.webp",
+      description: "Heavy-duty brake pads and rotors built for towing, off-roading, and high-load applications."
+    },
+    {
+      name: "Hawk Performance Ceramic Brake Pads (Set of 4)",
+      price: "$390",
+      image: "/hawk-ceramic-pads.webp",
+      description: "Premium ceramic brake pads designed for quiet operation, low dust, and excellent stopping performance."
+    },
+    {
+      name: "Flowmaster American Thunder Exhaust System",
+      price: "$1,100",
+      image: "/flowmaster-exhaust.webp",
+      description: "Aggressive-sounding stainless steel cat-back exhaust system optimized for power and torque gains."
+    },
+    {
+      name: "Corsa Sport Axle-Back Exhaust",
+      price: "$1,180",
+      image: "/corsa-axle-exhaust.webp",
+      description: "Performance-focused axle-back exhaust system with a deep tone and improved exhaust flow."
+    },
+    {
+      name: "KYB MonoMax Performance Shocks (Set of 4)",
+      price: "$940",
+      image: "/kyb-monotube-shocks.jpeg",
+      description: "Gas-charged shock absorbers engineered for better handling, control, and durability in extreme conditions."
+    },
+    {
+      name: "AEM Cold Air Intake System",
+      price: "$440",
+      image: "/aem-cold-air-intake.jpg",
+      description: "Advanced air intake system designed to improve throttle response and boost horsepower."
+    },
+    {
+      name: "FiTech Go EFI 4 Master Kit",
+      price: "$1,375",
+      image: "/fitech-efi-kit.webp",
+      description: "Self-learning EFI conversion kit for carbureted engines, improving fuel efficiency and overall performance."
+    },
+    {
+      name: "Whipple Stage 2 Supercharger Kit",
+      price: "$5,950",
+      image: "/whipple-supercharger-kit.jpg",
+      description: "Complete supercharger system engineered for maximum horsepower gains in street and track applications."
+    },
+    {
+      name: "Haltech Elite 1500 Engine Management System",
+      price: "$1,650",
+      image: "/haltech-engine-management.jpeg",
+      description: "Advanced standalone ECU with full tuning capabilities for high-performance and racing applications."
+    },
+    {
+      name: "Griffin Performance Aluminum Radiator",
+      price: "$470",
+      image: "/griffin-aluminum-radiator.jpg",
+      description: "High-performance aluminum radiator designed for superior cooling efficiency and durability."
+    },
+    {
+      name: "Odyssey Extreme Series AGM Battery",
+      price: "$360",
+      image: "/odyssey-agm-battery.jpg",
+      description: "Deep-cycle AGM battery offering high cranking power and reliability for performance vehicles."
+    },
+  ];
+
+  const productsPerPage = {
+    lg: 8, // 8 products on large screens
+    md: 4, // 4 products on medium screens
+    sm: 2, // 2 products on small screens
+  };
+
+  useEffect(() => {
+    // Function to update screen width
+    const handleResize = () => setScreenWidth(window.innerWidth);
+
+    // Initial check
+    handleResize();
+
+    // Add event listener on mount
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup on unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const goToNextPage = () => {
+    let itemsPerPage;
+
+    if (screenWidth >= 1024) {
+      itemsPerPage = productsPerPage.lg;
+    } else if (screenWidth >= 768) {
+      itemsPerPage = productsPerPage.md;
+    } else {
+      itemsPerPage = productsPerPage.sm;
+    }
+
+    const maxPage = Math.ceil(products.length / itemsPerPage);
+    setCurrentPage((prevPage) => Math.min(prevPage + 1, maxPage));
+  };
+
+  const goToPreviousPage = () => {
+    setCurrentPage((prevPage) => Math.max(prevPage - 1, 1));
+  };
+
+  const getVisibleProducts = () => {
+    // Determine the number of products to display based on screen size
+    let itemsToShow;
+
+    if (screenWidth >= 1024) {
+      itemsToShow = productsPerPage.lg;
+    } else if (screenWidth >= 768) {
+      itemsToShow = productsPerPage.md;
+    } else {
+      itemsToShow = productsPerPage.sm;
+    }
+
+    const startIndex = (currentPage - 1) * itemsToShow;
+    const endIndex = startIndex + itemsToShow;
+    return products.slice(startIndex, endIndex);
+  };
 
   const handleClickCatalog = () => {
     const element = document.getElementById('catalog');
@@ -81,16 +218,6 @@ export default function Home() {
         </div>
       </div>
 
-
-
-
-
-
-
-
-
-
-
       <div className="snap-start h-screen flex flex-col" id="remapping">
         <div className="flex flex-col md:flex-row items-start lg:pt-16 md:pt-20 pt-16">
           <div className="lg:text-lg md:text-md text-sm flex items-center md:pl-16 pl-10">
@@ -147,19 +274,53 @@ export default function Home() {
         </div>
       </div>
 
+      <div className="snap-start h-screen bg-black flex flex-col" id="catalog">
+        <div className='lg:flex'>
+          <h1 className="text-white py-8 md:py-6 lg:py-4 md:text-2xl text-lg px-6" >High-Quality Auto Parts </h1>
+          <div className="flex items-center px-6 pb-5 lg:pt-5">
+            <div className="w-8 h-px bg-green mr-2"></div>
+            <h1 className="text-light-gray lg:pl-3 md:text-sm text-xxs ">Explore our extensive selection of performance and replacement parts.</h1>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-10 lg:px-6 gap-4 flex-grow">
+          {getVisibleProducts().map((product, index) => (
+            <div key={index} className="p-1 ">
+              <div className="relative h-40 mb-4">
+                <Image
+                  src={product.image}
+                  layout="fill"
+                  objectFit="cover"
+                  alt={product.name}
+                />
+              </div>
+              <div className="flex justify-between">
+                <h3 className="text-white font-bold">{product.name}</h3>
+                <p className="text-green font-bold">{product.price}</p>
+              </div>
+              <p className="text-light-gray mt-2 line-clamp-3">{product.description}</p>
+            </div>
+          ))}
+        </div>
 
+        <div className="flex justify-center items-end md:pb-2 pb-5">
+          {currentPage > 1 && (
+            <button
+              onClick={goToPreviousPage}
+              className="text-gray bg-transparent p-2 rounded-full text-white"
+            >
+              ←
+            </button>
+          )}
 
-
-
-
-
-
-
-
-
-
-
-      <div className="snap-start h-screen bg-white" id="catalog">
+          {currentPage * (screenWidth >= 1024 ? productsPerPage.lg : screenWidth >= 768 ? productsPerPage.md : productsPerPage.sm) < products.length && (
+            <button
+              onClick={goToNextPage}
+              className="text-gray bg-transparent p-2 rounded-full text-white"
+            >
+              →
+            </button>
+          )}
+        </div>
       </div>
 
       <div className="snap-start h-screen relative flex flex-col" id="contact">
