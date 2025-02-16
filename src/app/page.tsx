@@ -1,6 +1,7 @@
 "use client";
 import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 export default function Home() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -347,8 +348,12 @@ export default function Home() {
           </div>
         </div>
         <div className="h-16 flex items-center justify-between border-t border-white px-10">
-          <h1 className="text-white md:text-md text-sm">Terms and Conditions</h1>
-          <h1 className="text-white md:text-md text-sm">Privacy Policy</h1>
+          <Link href="/terms-and-conditions">
+            <h1 className="text-white md:text-md text-sm">Terms and Conditions</h1>
+          </Link>
+          <Link href="/privacy-policy">
+            <h1 className="text-white md:text-md text-sm">Privacy Policy</h1>
+          </Link>
         </div>
       </div>
 
