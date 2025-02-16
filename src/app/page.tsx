@@ -295,7 +295,7 @@ export default function Home() {
                 />
               </div>
               <div className="flex justify-between">
-                <h3 className="text-white font-bold">{product.name}</h3>
+                <h3 className="text-white font-bold line-clamp-1">{product.name}</h3>
                 <p className="text-green font-bold">{product.price}</p>
               </div>
               <p className="text-light-gray mt-2 line-clamp-2">{product.description}</p>
