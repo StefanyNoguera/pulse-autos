@@ -275,7 +275,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="snap-start h-screen bg-black flex flex-col" id="catalog">
+      <div className="snap-start h-screen flex flex-col" id="catalog">
         <div className='lg:flex'>
           <h1 className="text-white pt-6 md:pt-6 lg:pt-4 pb-2 md:pb-6 lg:pb-4 md:text-2xl text-lg px-6" >High-Quality Auto Parts </h1>
           <div className="flex items-center px-6 pb-5 lg:pt-5">
