@@ -277,7 +277,7 @@ export default function Home() {
 
       <div className="snap-start h-screen bg-black flex flex-col" id="catalog">
         <div className='lg:flex'>
-          <h1 className="text-white py-6 md:py-6 lg:py-4 md:text-2xl text-lg px-6" >High-Quality Auto Parts </h1>
+          <h1 className="text-white pt-6 md:pt-6 lg:pt-4 pb-2 md:pb-6 lg:pb-4 md:text-2xl text-lg px-6" >High-Quality Auto Parts </h1>
           <div className="flex items-center px-6 pb-5 lg:pt-5">
             <div className="w-8 h-px bg-green mr-2"></div>
             <h1 className="text-light-gray lg:pl-3 md:text-sm text-xxs ">Explore our extensive selection of performance and replacement parts.</h1>
