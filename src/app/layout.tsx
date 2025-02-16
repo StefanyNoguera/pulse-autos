@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Trujillo Motors - Premium Automotive Services",
-  description: "Discover top-tier automotive services with Trujillo Motors. Quality repairs, maintenance, and customer satisfaction guaranteed.",
+  title: "Pulse Autos - Premium Automotive Services",
+  description: "Discover top-tier automotive services with Pulse Autos. Quality repairs, maintenance, and customer satisfaction guaranteed.",
 };
 export default function RootLayout({
   children,
