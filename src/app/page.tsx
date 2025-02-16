@@ -298,7 +298,7 @@ export default function Home() {
                 <h3 className="text-white font-bold">{product.name}</h3>
                 <p className="text-green font-bold">{product.price}</p>
               </div>
-              <p className="text-light-gray mt-2 line-clamp-3">{product.description}</p>
+              <p className="text-light-gray mt-2 line-clamp-2">{product.description}</p>
             </div>
           ))}
         </div>
