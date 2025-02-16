@@ -91,14 +91,14 @@ export default function Home() {
 
 
 
-      <div className="snap-start h-screen" id="remapping">
-        <div className="flex flex-col md:flex-row items-start lg:pt-16 md:pt-20 pt-20">
+      <div className="snap-start h-screen flex flex-col" id="remapping">
+        <div className="flex flex-col md:flex-row items-start lg:pt-16 md:pt-20 pt-16">
           <div className="lg:text-lg md:text-md text-sm flex items-center md:pl-16 pl-10">
             <div className="w-8 h-px bg-green mr-2"></div>
-            <h1 className="italic lg:pl-3">Remapping</h1>
+            <h1 className="italic text-white lg:pl-3">Remapping</h1>
           </div>
           <div>
-            <h1 className="lg:text-3xl md:text-2xl text-xl lg:pl-28 lg:pr-16 lg:pt-0 md:pt-16 md:pr-16 pl-10 pt-12 pr-10">
+            <h1 className="lg:text-3xl md:text-2xl text-xl lg:pl-28 lg:pr-16 lg:pt-0 md:pt-16 md:pr-16 pl-10 pt-12 text-white pr-10">
               Unlock Your Car’s True Potential with Vehicle Remapping.
               <span className="text-light-gray"> More power, better fuel efficiency, and a smoother drive—all tailored to your vehicle.</span>
             </h1>
@@ -128,11 +128,23 @@ export default function Home() {
           </div>
         </div>
 
-        <div>
-          <h1 className="border-2 rounded-full border-green flex items-center justify-center">Explore catalog</h1>
-          <h1 className="bg-green rounded-full flex items-center justify-center">Book a remap</h1>
+        <div className="flex grow justify-between items-end md:p-16 p-10">
+          <div>
+            <div className="flex items-center">
+              <div className="w-8 h-px bg-green mr-2"></div>
+              <h1 className="italic text-white lg:pl-3 lg:text-lg md:text-md text-sm">Optimize. Enhance.</h1>
+            </div>
+            <h1 className="text-light-gray md:text-sm text-xxs">Have questions? We’re here to <span className="block">help—call us!</span></h1>
+          </div>
+          <div className="md:text-sm text-xxs flex flex-col">
+            <button onClick={handleClickCatalog}>
+              <h1 className="border-2 rounded-full border-green flex items-center justify-center text-green md:w-36 w-28 h-8">Explore catalog</h1>
+            </button>
+            <button onClick={handleClickContact}>
+              <h1 className="bg-green text-black rounded-full flex items-center justify-center mt-2 md:w-36 w-28 h-8">Book a remap</h1>
+            </button>
+          </div>
         </div>
-
       </div>
 
 
