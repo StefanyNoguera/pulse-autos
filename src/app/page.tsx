@@ -83,55 +83,55 @@ export default function Home() {
     {
       name: "Universal Turbo Oil Line Kit Feed + Return Drain Flange T3 T4 T04E Oil Pan Plug",
       price: "$34.99",
-      image: "/odyssey-agm-battery.jpg",
+      image: "/universal-turbo-oil.webp",
       description: "Easy to install and apply. Complete kit for oil feed and drain return lines."
     },
     {
       name: "UGT35 GT3582 Turbo Kit 600+HP T3 AR.70 Turbocharger w/ Oil Feed Return Lines",
       price: "$170",
-      image: "/odyssey-agm-battery.jpg",
+      image: "/UGT35-GT3582-Turbo-Kit.webp",
       description: "Bigger HP Applications, perfect for all 4/6 cylinder and 2.5L-6.0L engines."
     },
     {
       name: "Ironcrafts Hyperflow Oval resonator - Large",
       price: "$280",
-      image: "/odyssey-agm-battery.jpg",
+      image: "/ironcrafts-hyperflow-resonator.webp",
       description: "With a body length that is longer than other types of cars (hatchbacks, sedans), the SUV-MPV exhaust system is also longer."
     },
     {
       name: "S68 JB4 Tuner for 2025+ G90 G99 BMW M5",
       price: "$999",
-      image: "/odyssey-agm-battery.jpg",
+      image: "/S68-JB4-Tuner.webp",
       description: "The ultimate tune for your 4.4L S68 powered G90 G99 BMW M5. The JB4 allows you to go from factory stock to full race and everywhere in between."
     },
     {
       name: "JB4 Tuner for 2016-2022 G12 N74 V12 BMW M760Li xDrive (BETA) + Wireless Bluetooth Connect Kit",
       price: "$1399",
-      image: "/odyssey-agm-battery.jpg",
+      image: "/JB4-Tuner.webp",
       description: "The ultimate tune for your 2016-2022 G12 BMW M760Li xDrive V12. The JB4 allows you to go from factory stock to full race and everywhere in between."
     },
     {
       name: "K&N High-Performance Engine Air Filter",
       price: "$359.99",
-      image: "/odyssey-agm-battery.jpg",
+      image: "/K&N-High-Performance-Engine-Air-Filter.webp",
       description: "Boosts horsepower and efficiency with superior airflow and reusable design."
     },
     {
       name: "For Audi R8 V10 5.2L OEM Ignition Coil",
       price: "$319.99",
-      image: "/odyssey-agm-battery.jpg",
+      image: "/For-Audi-R8-V10-5.2L-OEM-Ignition.webp",
       description: "OEM ignition coil for Audi R8 V10 5.2L – ensures reliable spark and peak engine performance."
     },
     {
       name: "Carbon Fiber Perforated Leather Racing Steering Wheel",
       price: "$450",
-      image: "/odyssey-agm-battery.jpg",
+      image: "/Carbon-Fiber-Perforated-Leather-Racing-Steering-Wheel.webp",
       description: "Sporty, high-grip design with carbon fiber and perforated leather for enhanced control and style."
     },
     {
       name: "Led Steering Wheel 32 Lights Display Carbon Fiber",
       price: "$720",
-      image: "/odyssey-agm-battery.jpg",
+      image: "/Led-Steering-Wheel-32-Lights-Display-Carbon-Fiber.webp",
       description: "Carbon fiber LED steering wheel with 32-light RPM display – adds style, real-time feedback, and racing performance."
     },
   ];
