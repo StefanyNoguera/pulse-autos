@@ -80,6 +80,12 @@ export default function Home() {
       image: "/odyssey-agm-battery.jpg",
       description: "Deep-cycle AGM battery offering high cranking power and reliability for performance vehicles."
     },
+    {
+      name: "Odyssey Extreme Series AGM Battery",
+      price: "$360",
+      image: "/odyssey-agm-battery.jpg",
+      description: "Deep-cycle AGM battery offering high cranking power and reliability for performance vehicles."
+    },
   ];
 
   const productsPerPage = {
